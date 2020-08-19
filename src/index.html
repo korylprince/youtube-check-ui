@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>YouTube Check</title>
+        <meta name="description" content="YouTube Check">
+        <meta name="author" content="Kory Prince <korylprince@gmail.com>">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+        <script src="https://apis.google.com/js/api.js"></script>
+        <style type="text/css">
+                @keyframes pulse-color {
+                    from {color: #FF0000}
+                    to {color: #C4302B}
+                }
+                @keyframes pulse-size {
+                    from {transform: scale(1.0);}
+                    to {transform: scale(1.01);}
+                }
+                #loading {
+                    min-width: 100%;
+                    min-height: 100vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #FAFAFA; 
+                }
+                #loading div {
+                    text-align: center;
+                    background-color: #FFFFFF;
+                    width: 300px;
+                    height: 300px;
+                    border-radius:150px;
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    justify-content: center;
+                    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+                }
+                #loading h1 {
+                    font-family: Roboto;
+                    margin: 0;
+                    animation-name: pulse-color;
+                    animation-duration: 2s;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
+                }
+        </style>
+    </head>
+    <body>
+        <div id="root">
+            <div id="loading">
+                <div>
+                    <img src="icons/favicon.png" width="150px">
+                    <h1>Loading</h1>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
