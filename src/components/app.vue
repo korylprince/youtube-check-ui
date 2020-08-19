@@ -1,7 +1,7 @@
 <template>
     <v-app>
         <v-app-bar color="primary" dark dense app>
-            <v-avatar size="36" color="white" style="margin-right: 5px"><img src="icons/favicon.png"></v-avatar>
+            <v-avatar size="36" color="white" style="margin-right: 5px"><img src="icons/android-chrome-48x48.png"></v-avatar>
             <v-toolbar-title>YouTube Check</v-toolbar-title>
             <v-spacer></v-spacer>
            <v-menu offset-y v-if="signed_in">
