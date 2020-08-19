@@ -1,0 +1,6 @@
+:80
+root * /site
+file_server
+log {
+    output stdout
+}
