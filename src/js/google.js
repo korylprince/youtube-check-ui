@@ -100,7 +100,7 @@ const google = {
                 part: "snippet",
             })
             const categoryName = category.result.items[0].snippet.title
-            return {title: video.result.items[0].snippet.title, category: categoryName, blocked: BLOCKED_CATEGORIES.includes(categoryName)}
+            return {id, title: video.result.items[0].snippet.title, category: categoryName, blocked: BLOCKED_CATEGORIES.includes(categoryName)}
         } catch (err) {
             console.error("Unable to get category:", err)
             throw Error("Unable to get category information. Please try again later.")

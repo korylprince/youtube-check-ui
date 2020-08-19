@@ -58,7 +58,7 @@
                                     required>
                                 </v-text-field>
                                 <span v-if="video">
-                                    <strong>Title:</strong> {{video.title}}<br />
+                                    <strong>Title:</strong> <a :href="video_url">{{video.title}}</a><br />
                                     <strong>Category:</strong> {{video.category}}<br />
                                     <strong>Status:</strong>
                                     <span :style="{color: video.blocked ? 'red' : 'green'}">
@@ -101,6 +101,14 @@ export default {
             error: "",
             loading: false,
         }
+    },
+    computed: {
+        video_url() {
+            if (this.video == null) {
+                return ""
+            }
+            return `https://www.youtube.com/watch?v=${this.video.id}`
+        },
     },
     methods: {
         async signin() {
